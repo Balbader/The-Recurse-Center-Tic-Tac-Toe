@@ -13,7 +13,7 @@ for (let i = 1; i <= 9; i++) {
 
 cells = document.querySelectorAll('li');
 
-// add click listener to each cell
+// add click to each cell
 function setMove(){
   if(this.textContent == ''){
     this.textContent = mark;
