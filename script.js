@@ -13,7 +13,7 @@ for (let i = 1; i <= 9; i++) {
 
 cells = document.querySelectorAll('li');
 
-// add click to each cell
+// add click listener to each cell
 function setMove(){
   if(this.textContent == ''){
     this.textContent = mark;
@@ -39,10 +39,12 @@ function winner(a,b,c){
     a.classList.add('winner');
     b.classList.add('winner');
     c.classList.add('winner');
+    msg.classList.add('winner');
     return true;
   }
   else if (a.textContent === mark && b.textContent === mark && c.textContent !== mark) {
     msg.textContent = ' No one wins ^_^ Let\'s play again :)' + ' Press the Reset button to play again :)';
+    msg.classList.add('lost');
     return false;
   }
 }
@@ -70,8 +72,9 @@ function reset(){
   mark = 'X';
   for (let i = 0; i < cells.length; i++){
     cells[i].textContent = '';
-    cells[i].classList.remove('winner');
   }
+  msg.classList.remove('winner');
+  msg.classList.remove('lost');
   msg.textContent = 'Click a square to mark your spot!';
 }
 
