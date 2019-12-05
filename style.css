@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -7,7 +8,8 @@ html {
 }
 
 body {
-  background-color: orange;
+    background-image: linear-gradient(blue, yellow);
+    height: 100%;
 }
 
 h1 {
@@ -75,4 +77,12 @@ li {
   font-size: 1.5em;
   padding-bottom: 1em;
   position: center;
+}
+
+.winner {
+    color: green;
+}
+
+.lost {
+    color: red;
 }
